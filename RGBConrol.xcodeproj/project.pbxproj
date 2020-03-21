@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C12CF22078FB9F42725E8EA /* libPods-RGBConrolTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE5DF6B9825F43F92E42BC0 /* libPods-RGBConrolTests.a */; };
+		AB6E286F5784E153D459C1BD /* libPods-RGBConrol.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAB1267B62E8F56687C5644 /* libPods-RGBConrol.a */; };
 		D1470396242660B900FD429D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1470395242660B900FD429D /* AppDelegate.swift */; };
 		D1470398242660B900FD429D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1470397242660B900FD429D /* SceneDelegate.swift */; };
 		D147039A242660B900FD429D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1470399242660B900FD429D /* ViewController.swift */; };
@@ -14,6 +16,7 @@
 		D147039F242660B900FD429D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D147039E242660B900FD429D /* Assets.xcassets */; };
 		D14703A2242660B900FD429D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14703A0242660B900FD429D /* LaunchScreen.storyboard */; };
 		D14703AD242660BA00FD429D /* RGBConrolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14703AC242660BA00FD429D /* RGBConrolTests.swift */; };
+		D14703CB2426637E00FD429D /* libRGBDriver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D14703CA2426637E00FD429D /* libRGBDriver.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F041228CE42A33105D0CCDA /* Pods-RGBConrolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGBConrolTests.debug.xcconfig"; path = "Target Support Files/Pods-RGBConrolTests/Pods-RGBConrolTests.debug.xcconfig"; sourceTree = "<group>"; };
+		46CED5F04D43BA3BFB7DCC6F /* Pods-RGBConrol.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGBConrol.debug.xcconfig"; path = "Target Support Files/Pods-RGBConrol/Pods-RGBConrol.debug.xcconfig"; sourceTree = "<group>"; };
+		7FAB1267B62E8F56687C5644 /* libPods-RGBConrol.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RGBConrol.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C53376829E586853A15B6937 /* Pods-RGBConrolTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGBConrolTests.release.xcconfig"; path = "Target Support Files/Pods-RGBConrolTests/Pods-RGBConrolTests.release.xcconfig"; sourceTree = "<group>"; };
 		D1470392242660B900FD429D /* RGBConrol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGBConrol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1470395242660B900FD429D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1470397242660B900FD429D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +45,9 @@
 		D14703A8242660BA00FD429D /* RGBConrolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RGBConrolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14703AC242660BA00FD429D /* RGBConrolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBConrolTests.swift; sourceTree = "<group>"; };
 		D14703AE242660BA00FD429D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D14703CA2426637E00FD429D /* libRGBDriver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRGBDriver.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D21F84375568786E37AAF7FC /* Pods-RGBConrol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGBConrol.release.xcconfig"; path = "Target Support Files/Pods-RGBConrol/Pods-RGBConrol.release.xcconfig"; sourceTree = "<group>"; };
+		ECE5DF6B9825F43F92E42BC0 /* libPods-RGBConrolTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RGBConrolTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB6E286F5784E153D459C1BD /* libPods-RGBConrol.a in Frameworks */,
+				D14703CB2426637E00FD429D /* libRGBDriver.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +64,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C12CF22078FB9F42725E8EA /* libPods-RGBConrolTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		352AF07D4693F9BC05981EFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D14703CA2426637E00FD429D /* libRGBDriver.a */,
+				7FAB1267B62E8F56687C5644 /* libPods-RGBConrol.a */,
+				ECE5DF6B9825F43F92E42BC0 /* libPods-RGBConrolTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84FE3AC692B904CBD27D861A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46CED5F04D43BA3BFB7DCC6F /* Pods-RGBConrol.debug.xcconfig */,
+				D21F84375568786E37AAF7FC /* Pods-RGBConrol.release.xcconfig */,
+				3F041228CE42A33105D0CCDA /* Pods-RGBConrolTests.debug.xcconfig */,
+				C53376829E586853A15B6937 /* Pods-RGBConrolTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D1470389242660B900FD429D = {
 			isa = PBXGroup;
 			children = (
 				D1470394242660B900FD429D /* RGBConrol */,
 				D14703AB242660BA00FD429D /* RGBConrolTests */,
 				D1470393242660B900FD429D /* Products */,
+				84FE3AC692B904CBD27D861A /* Pods */,
+				352AF07D4693F9BC05981EFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +142,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D14703B1242660BA00FD429D /* Build configuration list for PBXNativeTarget "RGBConrol" */;
 			buildPhases = (
+				A32425825EF7303827D71CC9 /* [CP] Check Pods Manifest.lock */,
 				D147038E242660B900FD429D /* Sources */,
 				D147038F242660B900FD429D /* Frameworks */,
 				D1470390242660B900FD429D /* Resources */,
@@ -123,6 +160,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D14703B4242660BA00FD429D /* Build configuration list for PBXNativeTarget "RGBConrolTests" */;
 			buildPhases = (
+				71B64A4FA74E865ECA3AD26C /* [CP] Check Pods Manifest.lock */,
 				D14703A4242660BA00FD429D /* Sources */,
 				D14703A5242660BA00FD429D /* Frameworks */,
 				D14703A6242660BA00FD429D /* Resources */,
@@ -194,6 +232,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71B64A4FA74E865ECA3AD26C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RGBConrolTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A32425825EF7303827D71CC9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RGBConrol-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D147038E242660B900FD429D /* Sources */ = {
@@ -360,6 +445,7 @@
 		};
 		D14703B2242660BA00FD429D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46CED5F04D43BA3BFB7DCC6F /* Pods-RGBConrol.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +464,7 @@
 		};
 		D14703B3242660BA00FD429D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D21F84375568786E37AAF7FC /* Pods-RGBConrol.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +483,7 @@
 		};
 		D14703B5242660BA00FD429D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F041228CE42A33105D0CCDA /* Pods-RGBConrolTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +506,7 @@
 		};
 		D14703B6242660BA00FD429D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C53376829E586853A15B6937 /* Pods-RGBConrolTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
