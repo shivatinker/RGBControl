@@ -7,17 +7,44 @@
 //
 
 import UIKit
-import CocoaAsyncSocket
 import RGBDriver
+import PlainPing
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController{
+    
+    @IBOutlet weak var colorView: UIView!
+    @IBOutlet weak var hueSlider: UISlider!
+    @IBOutlet weak var valueSlider: UISlider!
+    
+    var strip: WirelessRGBStrip?
+    public var host: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        var d = RGBDriver()
-        print(d.answer());
+        
+        if let host = host{
+            strip = WirelessRGBStrip(host: host, ledsCount: 181)
+            title = host
+            update()
+        }
     }
-
-
+    
+    @IBAction func onHueSliderChanges(_ sender: Any) {
+        update()
+    }
+    
+    @IBAction func onValueSliderChanges(_ sender: Any) {
+        update()
+    }
+    
+    private func update(){
+        let hue: CGFloat = CGFloat(hueSlider!.value)
+        let val: CGFloat = CGFloat(valueSlider!.value)
+        let color = UIColor(hue: hue, saturation: 1.0, brightness: val, alpha: 1.0)
+        
+        colorView.backgroundColor = color
+        strip?.fill(color: color)
+    }
+    
 }
 

@@ -17,6 +17,7 @@
 		D14703A2242660B900FD429D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14703A0242660B900FD429D /* LaunchScreen.storyboard */; };
 		D14703AD242660BA00FD429D /* RGBConrolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14703AC242660BA00FD429D /* RGBConrolTests.swift */; };
 		D14703CB2426637E00FD429D /* libRGBDriver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D14703CA2426637E00FD429D /* libRGBDriver.a */; };
+		D1A62B142426E98600967A8E /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A62B132426E98600967A8E /* DevicesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		D14703AC242660BA00FD429D /* RGBConrolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBConrolTests.swift; sourceTree = "<group>"; };
 		D14703AE242660BA00FD429D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D14703CA2426637E00FD429D /* libRGBDriver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRGBDriver.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1A62B132426E98600967A8E /* DevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewController.swift; sourceTree = "<group>"; };
 		D21F84375568786E37AAF7FC /* Pods-RGBConrol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGBConrol.release.xcconfig"; path = "Target Support Files/Pods-RGBConrol/Pods-RGBConrol.release.xcconfig"; sourceTree = "<group>"; };
 		ECE5DF6B9825F43F92E42BC0 /* libPods-RGBConrolTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RGBConrolTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -122,6 +124,7 @@
 				D147039E242660B900FD429D /* Assets.xcassets */,
 				D14703A0242660B900FD429D /* LaunchScreen.storyboard */,
 				D14703A3242660B900FD429D /* Info.plist */,
+				D1A62B132426E98600967A8E /* DevicesViewController.swift */,
 			);
 			path = RGBConrol;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1A62B142426E98600967A8E /* DevicesViewController.swift in Sources */,
 				D147039A242660B900FD429D /* ViewController.swift in Sources */,
 				D1470396242660B900FD429D /* AppDelegate.swift in Sources */,
 				D1470398242660B900FD429D /* SceneDelegate.swift in Sources */,

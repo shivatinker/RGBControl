@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5485575101EDD599E902C7BF /* libPods-RGBDriver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1629D6226D6022DB40BC8B63 /* libPods-RGBDriver.a */; };
 		D14703C42426636600FD429D /* RGBDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14703C32426636600FD429D /* RGBDriver.swift */; };
+		D14703CD2426660200FD429D /* RGBDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14703CC2426660200FD429D /* RGBDevice.swift */; };
+		D14703CF2426675C00FD429D /* WirelessRGBStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14703CE2426675C00FD429D /* WirelessRGBStrip.swift */; };
+		D14703D624266A7C00FD429D /* RGBUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14703D524266A7C00FD429D /* RGBUtils.swift */; };
+		D14703D8242698F500FD429D /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14703D7242698F500FD429D /* Interface.swift */; };
+		D14703DA24269BCB00FD429D /* SubnetScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14703D924269BCB00FD429D /* SubnetScanner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +29,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1629D6226D6022DB40BC8B63 /* libPods-RGBDriver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RGBDriver.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CB1B5F4FB960E0917FEAF64 /* Pods-RGBDriver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGBDriver.release.xcconfig"; path = "Target Support Files/Pods-RGBDriver/Pods-RGBDriver.release.xcconfig"; sourceTree = "<group>"; };
+		69177B6E10921E1BF22035B0 /* Pods-RGBDriver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RGBDriver.debug.xcconfig"; path = "Target Support Files/Pods-RGBDriver/Pods-RGBDriver.debug.xcconfig"; sourceTree = "<group>"; };
 		D14703C02426636600FD429D /* libRGBDriver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRGBDriver.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14703C32426636600FD429D /* RGBDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBDriver.swift; sourceTree = "<group>"; };
+		D14703CC2426660200FD429D /* RGBDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBDevice.swift; sourceTree = "<group>"; };
+		D14703CE2426675C00FD429D /* WirelessRGBStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WirelessRGBStrip.swift; sourceTree = "<group>"; };
+		D14703D12426678100FD429D /* libCocoaAsyncSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCocoaAsyncSocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D14703D32426678100FD429D /* libPods-RGBConrol.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-RGBConrol.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D14703D524266A7C00FD429D /* RGBUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBUtils.swift; sourceTree = "<group>"; };
+		D14703D7242698F500FD429D /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
+		D14703D924269BCB00FD429D /* SubnetScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubnetScanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +48,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5485575101EDD599E902C7BF /* libPods-RGBDriver.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E4F4CB965D047FC8CDBC61A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				69177B6E10921E1BF22035B0 /* Pods-RGBDriver.debug.xcconfig */,
+				2CB1B5F4FB960E0917FEAF64 /* Pods-RGBDriver.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 		D14703B72426636600FD429D = {
 			isa = PBXGroup;
 			children = (
 				D14703C22426636600FD429D /* RGBDriver */,
 				D14703C12426636600FD429D /* Products */,
+				D14703D02426678100FD429D /* Frameworks */,
+				0E4F4CB965D047FC8CDBC61A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +87,23 @@
 			isa = PBXGroup;
 			children = (
 				D14703C32426636600FD429D /* RGBDriver.swift */,
+				D14703CC2426660200FD429D /* RGBDevice.swift */,
+				D14703CE2426675C00FD429D /* WirelessRGBStrip.swift */,
+				D14703D524266A7C00FD429D /* RGBUtils.swift */,
+				D14703D7242698F500FD429D /* Interface.swift */,
+				D14703D924269BCB00FD429D /* SubnetScanner.swift */,
 			);
 			path = RGBDriver;
+			sourceTree = "<group>";
+		};
+		D14703D02426678100FD429D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D14703D12426678100FD429D /* libCocoaAsyncSocket.a */,
+				D14703D32426678100FD429D /* libPods-RGBConrol.a */,
+				1629D6226D6022DB40BC8B63 /* libPods-RGBDriver.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -69,6 +113,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D14703C72426636600FD429D /* Build configuration list for PBXNativeTarget "RGBDriver" */;
 			buildPhases = (
+				36DA1A9B7C91906EA34538E0 /* [CP] Check Pods Manifest.lock */,
 				D14703BC2426636600FD429D /* Sources */,
 				D14703BD2426636600FD429D /* Frameworks */,
 				D14703BE2426636600FD429D /* CopyFiles */,
@@ -115,12 +160,42 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36DA1A9B7C91906EA34538E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RGBDriver-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D14703BC2426636600FD429D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D14703CF2426675C00FD429D /* WirelessRGBStrip.swift in Sources */,
+				D14703D8242698F500FD429D /* Interface.swift in Sources */,
+				D14703D624266A7C00FD429D /* RGBUtils.swift in Sources */,
 				D14703C42426636600FD429D /* RGBDriver.swift in Sources */,
+				D14703CD2426660200FD429D /* RGBDevice.swift in Sources */,
+				D14703DA24269BCB00FD429D /* SubnetScanner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +318,7 @@
 		};
 		D14703C82426636600FD429D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69177B6E10921E1BF22035B0 /* Pods-RGBDriver.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V8DLQ6638;
@@ -256,6 +332,7 @@
 		};
 		D14703C92426636600FD429D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CB1B5F4FB960E0917FEAF64 /* Pods-RGBDriver.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2V8DLQ6638;
