@@ -124,6 +124,19 @@
                                     <action selector="onValueSliderChanges:" destination="BYZ-38-t0r" eventType="valueChanged" id="NLW-Ji-cdb"/>
                                 </connections>
                             </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LQB-bH-3Xn">
+                                <rect key="frame" x="310" y="192" width="51" height="31"/>
+                                <color key="onTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="onRainbowToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="RHt-0i-jnr"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rainbow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14h-jf-eba">
+                                <rect key="frame" x="16" y="197" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -131,13 +144,17 @@
                             <constraint firstItem="BMC-tf-Wbg" firstAttribute="top" secondItem="TWn-NM-qYe" secondAttribute="bottom" constant="8" id="98O-az-2t0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TWn-NM-qYe" secondAttribute="trailing" constant="16" id="AWO-bK-bxd"/>
                             <constraint firstItem="TWn-NM-qYe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="Fud-wA-CBu"/>
+                            <constraint firstItem="14h-jf-eba" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="No9-Rg-kDe"/>
                             <constraint firstItem="BMC-tf-Wbg" firstAttribute="leading" secondItem="4WH-Yz-5oL" secondAttribute="trailing" constant="10" id="Phz-MT-fds"/>
                             <constraint firstItem="4WH-Yz-5oL" firstAttribute="top" secondItem="TWn-NM-qYe" secondAttribute="bottom" constant="13" id="YLQ-nL-hOP"/>
                             <constraint firstItem="4g1-Qc-kYF" firstAttribute="top" secondItem="BMC-tf-Wbg" secondAttribute="bottom" constant="8" id="YXX-pe-1gb"/>
                             <constraint firstItem="4WH-Yz-5oL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aDU-3Q-g3p"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4g1-Qc-kYF" secondAttribute="trailing" constant="16" id="aTs-Vz-Y52"/>
+                            <constraint firstItem="14h-jf-eba" firstAttribute="centerY" secondItem="LQB-bH-3Xn" secondAttribute="centerY" id="gxn-Ad-ah3"/>
                             <constraint firstItem="TWn-NM-qYe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hYk-LO-m67"/>
+                            <constraint firstItem="LQB-bH-3Xn" firstAttribute="top" secondItem="4g1-Qc-kYF" secondAttribute="bottom" constant="8" id="lYr-bZ-aLM"/>
                             <constraint firstItem="4g1-Qc-kYF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nco-so-Uon"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LQB-bH-3Xn" secondAttribute="trailing" constant="16" id="rhX-Zd-JrM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -146,6 +163,7 @@
                         <outlet property="colorView" destination="TWn-NM-qYe" id="BhQ-8m-GB2"/>
                         <outlet property="hueSlider" destination="BMC-tf-Wbg" id="yz1-IK-ycO"/>
                         <outlet property="navigationItem" destination="4Uo-jy-Fsc" id="mxS-O1-wUb"/>
+                        <outlet property="rainbowSwitch" destination="LQB-bH-3Xn" id="58R-uH-CNg"/>
                         <outlet property="valueSlider" destination="4g1-Qc-kYF" id="pHd-ZS-Kf9"/>
                     </connections>
                 </viewController>

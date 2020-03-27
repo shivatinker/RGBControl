@@ -10,7 +10,7 @@ import Foundation
 import CocoaAsyncSocket
 import PlainPing
 
-public class WirelessRGBStrip: NSObject, RGBDevice, GCDAsyncSocketDelegate {
+public class WirelessRGBStrip: NSObject, RGBDevice, GCDAsyncUdpSocketDelegate {
     
     // Static
     
@@ -18,61 +18,46 @@ public class WirelessRGBStrip: NSObject, RGBDevice, GCDAsyncSocketDelegate {
     var host: String
     let port: UInt16 = 56441
     
-    enum State{
-        case disconnected
-        case connected
-        case connecting
+    var mSocket: GCDAsyncUdpSocket!
+
+    enum State {
+        case ready
+        case sendingData
     }
     
-    var state = State.disconnected
+    var state = State.ready
     
-    var mSocket: GCDAsyncSocket!
-    
-    public func connect() {
-        if(state != .disconnected){
+    private func sendPacket(_ data: Data){
+        if(state != .ready){
             return
         }
-        state = .connecting
-        mSocket = GCDAsyncSocket.init(delegate: self, delegateQueue: DispatchQueue.main)
-        do{
-            try mSocket.connect(toHost: host, onPort: port, withTimeout: 1)
-        } catch let e{
-            print(e)
-        }
-        print("Connecting to \(host):\(port)")
+        mSocket.setDelegate(self)
+        mSocket.send(data, toHost: host, port: port, withTimeout: 0.5, tag: 1)
+        state = .sendingData
     }
     
-    public func disconnect() {
-        if(state != .disconnected){
-            mSocket.disconnect()
-        }
-    }
-    
-    public func fill(color: UIColor) {
-        setLeds(colors: Array(repeating: color, count: ledsCount))
+    public func fill(color: UIColor){
+        //sendPacket(RGBUtils.createFillPacket(color: color))
+        sendPacket(RGBUtils.createAllLedsPacket(leds: Array(repeating: color, count: ledsCount)))
     }
     
     public func setLeds(colors: [UIColor]) {
-        connect()
-        mSocket.write(RGBUtils.createAllLedsPacket(leds: colors), withTimeout: -1, tag: 1)
+        sendPacket(RGBUtils.createAllLedsPacket(leds: colors))
     }
     
     public init(host: String, ledsCount: Int) {
         self.ledsCount = ledsCount
         self.host = host
+        mSocket = GCDAsyncUdpSocket(delegate: nil, delegateQueue: DispatchQueue.global(qos: .userInitiated))
     }
     
-    public func socket(_ sock: GCDAsyncSocket, didConnectToHost host: String, port: UInt16) {
-        print("Connected to \(host):\(port)")
-        state = .connected
+    public func udpSocket(_ sock: GCDAsyncUdpSocket, didSendDataWithTag tag: Int) {
+        //print("Data sent.")
+        state = .ready
     }
     
-    public func socketDidDisconnect(_ sock: GCDAsyncSocket, withError err: Error?) {
-        if let err = err{
-            print("Disconnected with error: \(err)")
-        } else {
-            print("Successfuly disconnected")
-        }
-        state = .disconnected
+    public func udpSocket(_ sock: GCDAsyncUdpSocket, didNotSendDataWithTag tag: Int, dueToError error: Error?) {
+        print(error)
+        state = .ready
     }
 }

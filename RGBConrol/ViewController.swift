@@ -12,6 +12,7 @@ import PlainPing
 
 class ViewController: UIViewController{
     
+    @IBOutlet weak var rainbowSwitch: UISwitch!
     @IBOutlet weak var colorView: UIView!
     @IBOutlet weak var hueSlider: UISlider!
     @IBOutlet weak var valueSlider: UISlider!
@@ -28,6 +29,27 @@ class ViewController: UIViewController{
             update()
         }
     }
+    
+    var rainbowActive = false
+    var hue = 0
+    @IBAction func onRainbowToggle(_ sender: Any) {
+        if(rainbowSwitch.isOn){
+            rainbowActive = true
+            DispatchQueue.global(qos: .userInitiated).sync {
+                let t = Timer.scheduledTimer(withTimeInterval: 1.0 / 75, repeats: true){ timer in
+                    if(!self.rainbowActive){
+                        timer.invalidate()
+                        return
+                    }
+                    self.strip?.fill(color: UIColor(hue: CGFloat(self.hue) / 360.0, saturation: 1.0, brightness: 1.0, alpha: 1.0))
+                    self.hue = (self.hue + 1) % 360
+                }
+            }
+        }else{
+            rainbowActive = false
+        }
+    }
+    
     
     @IBAction func onHueSliderChanges(_ sender: Any) {
         update()

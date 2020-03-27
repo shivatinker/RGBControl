@@ -12,9 +12,6 @@ import UIKit.UIColor
 public protocol RGBDevice{
     var ledsCount: Int {get}
     
-    func connect()
-    func disconnect()
-    
     func fill(color: UIColor)
     func setLeds(colors: [UIColor])
 }
